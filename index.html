@@ -427,9 +427,9 @@
 const skills = [
   { title:"Cloud Platforms", items:["Google Cloud Platform","Microsoft Azure","Databricks","Informatica","Confluent"] },
   { title:"Orchestration & ETL", items:["Cloud Composer","Azure Data Factory","Azure Synapse","Airflow"] },
-  { title:"Streaming", items:["Confluent Kafka","Apache Kafka","K-SQL DB","GCP Cloud Pub/Sub"] },
+  { title:"Streaming", items:["Confluent Kafka","Apache Kafka","K-SQL DB","GCP Cloud Pub/Sub","Oracle GoldenGate"] },
   { title:"Languages & Data", items:["Python","Spark","SQL","NoSQL","Azure AI Search"] },
-  { title:"Databases", items:["BigQuery","Cosmos DB","SQL Server","MongoDB","Synapse SQL","Redis"] },
+  { title:"Databases", items:["BigQuery","Cosmos DB","SQL Server","MongoDB","Synapse SQL","Oracle DB","Redis"] },
   { title:"Data Architecture", items:["Data Lakehouse","Delta Lake","Medallion (Bronze/Silver/Gold)","Data Warehouse","Data Lake"] },
   { title:"Governance & Ops", items:["Azure Key Vault","Custom Package","Microsoft Purview","RBAC"] },
   { title:"Visualization", items:["Tableau","Power BI"] },
@@ -649,13 +649,13 @@ document.getElementById('act-grid').append(...activities.map(a => el(`
 
   // ---- node layout: sources -> hub -> outputs ----
   const nodeDefs = [
-    { label:"GCS",       pos:[-5.6,  2.6, -1.5], color:0x4fd1c5, r:0.22 },
-    { label:"ADLS",      pos:[-5.8, -0.4,  0.8], color:0x4fd1c5, r:0.22 },
-    { label:"Kafka",     pos:[-5.0, -2.8, -0.6], color:0x4fd1c5, r:0.22 },
-    { label:"Lakehouse", pos:[ 0.2,  0.0,  1.6], color:0xf5a623, r:0.42, hub:true },
-    { label:"BigQuery",  pos:[ 5.4,  2.4, -1.2], color:0x8ff0e6, r:0.22 },
-    { label:"Synapse",   pos:[ 5.9, -0.5,  0.6], color:0x8ff0e6, r:0.22 },
-    { label:"Insights",  pos:[ 5.1, -2.7, -0.8], color:0x8ff0e6, r:0.22 },
+    { label:"Governance", pos:[-5.6,  2.6, -1.5], color:0x4fd1c5, r:0.22 },
+    { label:"Batch",      pos:[-5.8, -0.4,  0.8], color:0x4fd1c5, r:0.22 },
+    { label:"Streaming",  pos:[-5.0, -2.8, -0.6], color:0x4fd1c5, r:0.22 },
+    { label:"Lakehouse",  pos:[ 0.2,  0.0,  1.6], color:0xf5a623, r:0.42, hub:true },
+    { label:"BigQuery",   pos:[ 5.4,  2.4, -1.2], color:0x8ff0e6, r:0.22 },
+    { label:"Synapse",    pos:[ 5.9, -0.5,  0.6], color:0x8ff0e6, r:0.22 },
+    { label:"Insights",   pos:[ 5.1, -2.7, -0.8], color:0x8ff0e6, r:0.22 },
   ];
 
   const nodeGeoCache = {};
