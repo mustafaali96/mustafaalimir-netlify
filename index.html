@@ -425,24 +425,24 @@
 /* ================= CONTENT DATA ================= */
 
 const skills = [
-  { title:"Cloud Platforms", items:["Google Cloud Platform","Microsoft Azure","GCS / ADLS Gen2","Vertex AI Model Garden"] },
-  { title:"Orchestration & ETL", items:["Cloud Composer / Airflow","Azure Data Factory","Azure Synapse","Databricks"] },
-  { title:"Streaming", items:["Confluent Kafka","Apache Kafka","K-SQL DB","Python Confluent Client"] },
-  { title:"Languages & Data", items:["Python","Spark","SQL / NoSQL","Django"] },
-  { title:"Databases", items:["BigQuery","Cosmos DB","SQL Server","MongoDB · MySQL · Redis"] },
-  { title:"Architecture", items:["Data Lakehouse","Medallion (Bronze/Silver/Gold)","Data Warehouse","Delta Lake"] },
-  { title:"Governance & Ops", items:["Azure Key Vault","Custom Pipeline Logging","CDC & Historical Tracking","Elasticsearch / Azure AI Search"] },
-  { title:"Visualization", items:["Tableau","Power BI-style Dedicated SQL Pools","Heroku","Custom Dashboards"] },
+  { title:"Cloud Platforms", items:["Google Cloud Platform","Microsoft Azure","Databricks","Informatica","Confluent"] },
+  { title:"Orchestration & ETL", items:["Cloud Composer","Azure Data Factory","Azure Synapse","Airflow"] },
+  { title:"Streaming", items:["Confluent Kafka","Apache Kafka","K-SQL DB","GCP Cloud Pub/Sub"] },
+  { title:"Languages & Data", items:["Python","Spark","SQL","NoSQL","Azure AI Search"] },
+  { title:"Databases", items:["BigQuery","Cosmos DB","SQL Server","MongoDB","Synapse SQL","Redis"] },
+  { title:"Data Architecture", items:["Data Lakehouse","Delta Lake","Medallion (Bronze/Silver/Gold)","Data Warehouse","Data Lake"] },
+  { title:"Governance & Ops", items:["Azure Key Vault","Custom Package","Microsoft Purview","RBAC"] },
+  { title:"Visualization", items:["Tableau","Power BI"] },
 ];
 
 const experience = [
   {
     role:"Big Data Engineer Consultant", org:"Kahramaa", when:"Dec 2024 — Present", current:true,
-    desc:"Providing expert consulting in <b>Azure</b> big data engineering & data governance — automating pipelines, optimizing Data Lakehouse storage, and integrating Synapse Analytics, Data Factory and Azure AI Studio. Implementing data governance and security with <b>Azure Key Vault</b>."
+    desc:"Providing expert consulting in <b>Azure</b> big data engineering & data governance — implemented Data Lakehouse Medallion Architecture, automating ETL pipelines, optimizing Data Lakehouse storage, and integrating Synapse Analytics, Data Factory and Azure AI Studio. Implementing data governance and security with <b>Azure Key Vault</b>."
   },
   {
     role:"Sr. Data Consultant", org:"Systems Limited", when:"Mar 2024 — Dec 2024",
-    desc:"Delivered data engineering consulting across <b>GCP &amp; Azure</b> using Cloud Composer, BigQuery, Databricks and Azure AI Search. Led a team to a <b>25% increase</b> in data processing efficiency within six months."
+    desc:"Delivered data engineering consulting across <b>GCP &amp; Azure</b> using Cloud Composer, BigQuery and Azure AI Search. Led a team to a <b>25% increase</b> in data processing efficiency within six months."
   },
   {
     role:"Sr. Data Engineer", org:"Royal Cyber Inc.", when:"Jul 2021 — Mar 2024",
@@ -460,9 +460,14 @@ const experience = [
 
 const projects = [
   {
+    name:"Data Lakehouse Architecture Optimization", org:"Kahramaa", metric:"5 Layers → 3 Layers",
+    desc:"Rebuilt a 5-layer architecture into a streamlined 3-layer Medallion architecture. Implemented CDC ingestion, handling Late-arriving data, reducing storage costs and improving query performance.",
+    tags:["Data Architecture","Azure Synapse","Medallion","CDC"]
+  },
+  {
     name:"Cosmos DB Utility Data Platform", org:"Kahramaa", metric:"10hrs → 15min",
-    desc:"Optimized Cosmos DB ingestion for 20M electricity &amp; water records/day across 800K users using batch writes and parallel processing, then rebuilt a 5-layer pipeline into a streamlined 3-layer Medallion architecture.",
-    tags:["Cosmos DB","Azure Synapse","Medallion","CDC"]
+    desc:"Optimized Cosmos DB ingestion for 40M electricity &amp; water records/day on 30 minutes interval data across 800K users using batch writes and parallel processing.",
+    tags:["Cosmos DB","Azure Synapse","Optimization"]
   },
   {
     name:"Cloud Data & AI Search Migration", org:"Mattress Firm", metric:"On-prem → Cloud",
